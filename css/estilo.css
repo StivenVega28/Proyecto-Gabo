@@ -1,0 +1,330 @@
+/* ==========================================
+   1. Estilos Generales y Base
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ea;
+    /* Fondo crema tipo museo */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   2. Menú de Navegación (Uso de Clases)
+   ========================================== */
+.menu-navegacion {
+    background-color: #1a1a1a;
+    /* Fondo oscuro elegante */
+    padding: 15px;
+    text-align: center;
+}
+
+.enlace-menu {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover para interactividad */
+.enlace-menu:hover {
+    color: #cca43b;
+    /* Dorado artístico al pasar el cursor */
+}
+
+/* ==========================================
+   3. Contenedor y Textos (Uso de Clases)
+   ========================================== */
+.contenedor-principal {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-galeria {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   4. Obra Destacada (Uso de ID y Clases)
+   ========================================== */
+/* El ID identifica de forma única la sección de la obra maestra */
+#obra-principal {
+    background-color: #33a3e4;
+    border: 1px solid #e0dcd3;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marco-cuadro {
+    background-color: #000000;
+    padding: 15px;
+    /* Simula el marco físico del cuadro */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#obra-principal .marco-cuadro:hover {
+    background-color: #cca43b;
+    box-shadow: 0 10px 25px rgba(204, 164, 59, 0.45);
+}
+
+.imagen-cuadro {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    /* Evita que se desborde en pantallas grandes */
+}
+
+.info-cuadro h2 {
+    color: #1a1a1a;
+    margin: 10px 0;
+}
+
+.autor {
+    color: #cca43b;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.descripcion {
+    line-height: 1.6;
+    color: #555555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   5. Pie de Página
+   ========================================== */
+footer {
+    background-color: #1a1a1a;
+    color: #888888;
+    text-align: center;
+    padding: 15px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* INSERT_YOUR_CODE */
+.galeria-gabo {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 24px;
+}
+
+.titulo-galeria-secundaria {
+    color: #333;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 22px;
+}
+
+.contenedor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+}
+
+.card-obra {
+    background: #fdf6e3;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.11), 0 1.5px 4px rgba(0, 0, 0, 0.07);
+    width: 340px;
+    max-width: 90vw;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.26s, transform 0.24s;
+}
+
+.card-obra:hover {
+    box-shadow: 0 14px 34px rgba(204, 164, 59, 0.14), 0 1.5px 8px rgba(0, 0, 0, 0.10);
+    transform: translateY(-5px) scale(1.03);
+}
+
+.card-obra .marco-cuadro {
+    padding: 10px;
+    margin-bottom: 0;
+    background-color: #ece5cf;
+    width: 100%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-sizing: border-box;
+}
+
+.card-obra .imagen-cuadro {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 220px;
+    width: 100%;
+    box-shadow: 0 2.5px 10px rgba(226, 193, 75, 0.09);
+}
+
+.card-obra .info-cuadro {
+    padding: 20px 20px 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-obra h3 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card-obra .autor {
+    font-size: 1rem;
+    margin: 2px 0 10px 0;
+}
+
+.card-obra .descripcion {
+    font-size: 0.97rem;
+    color: #444;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .contenedor-cards {
+        gap: 24px;
+    }
+
+    .card-obra {
+        width: 95vw;
+        max-width: 470px;
+    }
+
+    .galeria-gabo {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-galeria-secundaria {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .contenedor-cards {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .card-obra {
+        width: 100%;
+        min-width: 0;
+        max-width: 375px;
+    }
+
+    .card-obra .marco-cuadro {
+        padding: 7px;
+    }
+
+    .card-obra .imagen-cuadro {
+        height: 160px;
+    }
+
+    .card-obra .info-cuadro {
+        padding: 14px 10px 8px 10px;
+    }
+}
+
+.carrusel-gabo {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.slide {
+    min-width: 100%;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.controles a {
+    padding: 8px 12px;
+    text-decoration: none;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.footer-web {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-lista li {
+    margin: 10px 0;
+}
+
+.footer-lista a {
+    color: #cca43b;
+    text-decoration: none;
+}
+
+.footer-lista a:hover {
+    text-decoration: underline;
+}
